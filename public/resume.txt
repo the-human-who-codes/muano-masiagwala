@@ -1,0 +1,31 @@
+Muano Masiagwala
+muanomasiagwala2021@gmail.com
+portfolio | github | linkedin |
+
+EDUCATION
+UNIVERSITY OF THE WITWATERSRAND                                                    2025-05-01
+Full-time Bachelor of Science in Computer Science                          Johannesburg, South Africa
+
+SKILLS
+Programming Languages    JavaScript, TypeScript, Python, Java, C++
+Libraries/Frameworks     React, Node.js, Express.js, Firebase Functions, REST APIs, Tailwind CSS, Pandas, NumPy, Scikit-learn, TensorFlow
+Tools / Platforms        Git, GitHub Actions, VS Code
+Databases               Firestore, MySQL, Microsoft SQL Server
+
+PROJECTS / OPEN-SOURCE
+CURECLOUD HEALTH MANAGEMENT SYSTEM                                React, Firebase, Firestore, Express.js
+Designed a digital system to replace paper records in public hospitals. Implemented specialist booking, centralized medical data, and laid groundwork for AI integration.
+
+EVENTS & ACTIVITIES APP UNIVERSITY PLATFORM                       React, Firebase, Node.js
+Developed an app for Wits University students to discover campus events. Built notification systems (bell icon with unread count), file uploads, and event engagement features.
+
+FUNDING REQUEST MANAGER                                           Vanilla JS, HTML, CSS
+Created a portal for students to apply for funding and sponsorships. Implemented UI and backend logic to handle applications and manage student profiles.
+
+CERTIFICATIONS
+• Microsoft Azure Fundamentals (AZ-900)
+• Java SE Programmer I (OCA)
+
+HONORS & AWARDS
+• Built the top-performing Sudoku Solver in class project.
+• Developed the smartest Snake AI Agent, outperforming peers in tournament-based testing.

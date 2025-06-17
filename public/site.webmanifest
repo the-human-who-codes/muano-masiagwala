@@ -1,0 +1,21 @@
+{
+  "name": "Muano Masiagwala | Software Engineer & Data Scientist",
+  "short_name": "Muano.dev",
+  "description": "Personal portfolio of Muano Masiagwala, a software engineer and data scientist.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#00ff66",
+  "background_color": "#0a0a0a",
+  "display": "standalone",
+  "start_url": "/"
+}
