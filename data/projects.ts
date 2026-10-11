@@ -22,6 +22,8 @@ export const softwareProjects: ProjectType[] = [
     initials: "CC",
     technologies: ["React", "Express.js", "Firebase", "Firestore"],
     github: github("CureCloud"),
+    demo: "https://curecloud1.web.app/",
+    image: "/projects/curecloud.jpg",
   },
   {
     id: "algorithm-quest",
@@ -41,7 +43,7 @@ export const softwareProjects: ProjectType[] = [
       "Learning management system combining Duolingo-style gamification with AI tools, achievements, courses, and classroom management.",
     initials: "EQ",
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-    // Repo is private; add github("gamified-lms") here if it's made public
+    github: github("gamified-lms"),
   },
   {
     id: "funding-manager",
