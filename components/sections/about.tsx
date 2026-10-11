@@ -1,24 +1,12 @@
-"use client"
-
 import type React from "react"
 import { Button } from "@/components/ui/button"
-import { Code, Cloud, Download } from "lucide-react"
+import { Code, Server, Download } from "lucide-react"
 
 interface AboutProps {
   content: string[]
 }
 
 export default function About({ content }: AboutProps) {
-  const handleDownloadResume = () => {
-    // Create a link element and trigger download
-    const link = document.createElement("a")
-    link.href = "/resume.txt"
-    link.download = "Muano_Masiagwala_Resume.txt"
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-
   return (
     <section id="about" className="py-20 bg-muted/50">
       <div className="container">
@@ -37,35 +25,34 @@ export default function About({ content }: AboutProps) {
 
           <div className="grid md:grid-cols-2 gap-6">
             <SpecialtyCard
-              icon={<Code className="w-6 h-6 text-primary" />}
-              title="Full-Stack Development"
-              description="Experienced in building scalable web applications, user-centric systems, and modern software solutions using cutting-edge frameworks and best practices."
+              icon={<Server className="w-6 h-6 text-primary" />}
+              title="Infrastructure Automation"
+              description="Building the systems that keep large-scale cloud infrastructure patched, healthy, and right-sized — safely and without manual toil."
               points={[
-                "React, Node.js, and Express.js development",
-                "RESTful APIs and database design",
-                "Responsive UI/UX implementation",
+                "Patching automation for EC2 infrastructure",
+                "Fleet scaling and management at AWS",
+                "End-to-end ownership from idea to production",
               ]}
             />
 
             <SpecialtyCard
-              icon={<Cloud className="w-6 h-6 text-primary" />}
-              title="Cloud & DevOps"
-              description="Skilled in cloud-native applications, CI/CD pipelines, and modern development workflows that ensure scalable and maintainable software systems."
+              icon={<Code className="w-6 h-6 text-primary" />}
+              title="Full-Stack Development"
+              description="Designing and shipping user-centric web applications, from responsive frontends to well-documented APIs."
               points={[
-                "Firebase and Azure cloud platforms",
-                "Git, GitHub Actions, and CI/CD",
-                "Agile development methodologies",
+                "React, Next.js, Node.js, and Express.js",
+                "RESTful APIs and database design",
+                "Firebase, Azure, and CI/CD pipelines",
               ]}
             />
           </div>
 
           <div className="mt-8 flex justify-center">
-            <Button
-              className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2"
-              onClick={handleDownloadResume}
-            >
-              <Download className="w-4 h-4" />
-              Download Resume
+            <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 flex items-center gap-2">
+              <a href="/resume.pdf" download="Muano_Masiagwala_Resume.pdf">
+                <Download className="w-4 h-4" />
+                Download Resume
+              </a>
             </Button>
           </div>
         </div>

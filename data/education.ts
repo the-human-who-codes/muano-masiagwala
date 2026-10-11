@@ -5,8 +5,8 @@ export const educationData: EducationType[] = [
     id: "bachelors",
     title: "Bachelor of Science in Computer Science",
     institution: "University of the Witwatersrand",
-    date: "Graduated 2025",
+    date: "2022 – 2024",
     description:
-      "Strong foundation in software engineering principles, algorithms, data structures, and artificial intelligence. Achieved notable academic accomplishments including top-performing projects in Sudoku Solver and Snake AI Agent development.",
+      "Strong foundation in software engineering principles, algorithms, data structures, and artificial intelligence. Built the top-performing Sudoku Solver in class and the smartest Snake AI Agent in tournament-based testing.",
   },
 ]

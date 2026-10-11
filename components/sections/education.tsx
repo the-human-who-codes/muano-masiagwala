@@ -72,7 +72,7 @@ function CertificationCard({ item }: { item: EducationType }) {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 mt-2 text-sm text-primary hover:underline"
         >
-          View Certificate <ExternalLink className="h-3 w-3" />
+          View Credential <ExternalLink className="h-3 w-3" />
         </Link>
       )}
     </div>

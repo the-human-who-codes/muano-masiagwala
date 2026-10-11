@@ -10,9 +10,9 @@ import { mainNavigation } from "@/data/navigation"
 
 export const siteConfig: SiteConfig = {
   name: "MUANO.DEV",
-  url: "https://muanomasiagwala-d678d.web.app",
+  url: "https://muano-masiagwala.vercel.app",
   author: authorData,
-  description: `Personal portfolio of ${authorData.name}, a Computer Science graduate and full-stack developer specializing in web development, data analytics, and cloud-native applications.`,
+  description: `Personal portfolio of ${authorData.name}, a Software Engineer at AWS building patching automation and fleet management for EC2 infrastructure.`,
   copyright: `${authorData.name}. All rights reserved.`,
   mainNav: mainNavigation,
   socialLinks: socialLinks,

@@ -6,7 +6,8 @@ export const certificationsData: EducationType[] = [
     title: "Microsoft Azure Fundamentals (AZ-900)",
     institution: "Microsoft",
     date: "May 2025",
-    link: "https://docs.microsoft.com/en-us/learn/certifications/azure-fundamentals/",
+    description: "Earned during the Afrika Tikkun cloud apprenticeship.",
+    link: "https://learn.microsoft.com/en-gb/users/MuanoMasiagwala-1584/credentials/DA175BFDEBB2680B",
   },
   {
     id: "java-oca",
