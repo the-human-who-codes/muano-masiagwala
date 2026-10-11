@@ -43,7 +43,7 @@ export default function Projects({ projects, githubProfile }: ProjectsProps) {
 
 function ProjectCard({ project }: { project: ProjectType }) {
   return (
-    <article className="group bg-card rounded-lg overflow-hidden border transition-all hover:border-primary/50 hover:shadow-md h-full flex flex-col">
+    <article className="reveal group bg-card rounded-lg overflow-hidden border transition-all hover:border-primary/50 hover:shadow-md h-full flex flex-col">
       <div className="h-40 bg-gradient-to-br from-muted to-card flex items-center justify-center">
         <span className="text-4xl font-bold text-primary transition-transform group-hover:scale-110" aria-hidden="true">
           {project.initials}

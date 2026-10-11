@@ -45,7 +45,7 @@ export default function Education({ education, certifications }: EducationProps)
 
 function EducationCard({ item }: { item: EducationType }) {
   return (
-    <div className="bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
+    <div className="reveal bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
       <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
         <h4 className="text-lg font-bold">{item.title}</h4>
         <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded whitespace-nowrap">{item.date}</span>
@@ -58,7 +58,7 @@ function EducationCard({ item }: { item: EducationType }) {
 
 function CertificationCard({ item }: { item: EducationType }) {
   return (
-    <div className="bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
+    <div className="reveal bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
       <div className="flex justify-between items-start mb-2 flex-wrap gap-2">
         <h4 className="text-lg font-bold">{item.title}</h4>
         <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded whitespace-nowrap">{item.date}</span>

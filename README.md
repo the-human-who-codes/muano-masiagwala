@@ -1,30 +1,33 @@
-# Muanomasiagwala clone
+# muano-masiagwala
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Personal portfolio of Muano Masiagwala — Software Engineer at AWS (EC2).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/muano-thee-lasts-projects/v0-muanomasiagwala-clone)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/OkE0TlKtLpO)
+**Live:** https://muano-masiagwala.vercel.app
 
-## Overview
+Built with Next.js 15, React 19, TypeScript, and Tailwind CSS. Deployed on Vercel.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## Development
 
-## Deployment
+```bash
+pnpm install
+pnpm dev        # http://localhost:3000
+pnpm typecheck
+pnpm build
+```
 
-Your project is live at:
+## Updating content
 
-**[https://vercel.com/muano-thee-lasts-projects/v0-muanomasiagwala-clone](https://vercel.com/muano-thee-lasts-projects/v0-muanomasiagwala-clone)**
+All content lives in `data/` — no component changes needed for routine updates:
 
-## Build your app
+| File | Content |
+| --- | --- |
+| `data/author.ts` | Name, title, contact details |
+| `data/about.ts` | About Me paragraphs |
+| `data/experience.ts` | Work experience timeline |
+| `data/projects.ts` | Project cards |
+| `data/skills.ts` | Tech stack (logos in `public/tech/`, from [devicon](https://devicon.dev)) |
+| `data/education.ts`, `data/certifications.ts` | Education & certifications |
 
-Continue building your app on:
+### Resume
 
-**[https://v0.dev/chat/projects/OkE0TlKtLpO](https://v0.dev/chat/projects/OkE0TlKtLpO)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+Edit `resume/resume.html`, then run `pnpm resume` (requires Google Chrome) to regenerate `public/resume.pdf`.

@@ -70,7 +70,7 @@ interface SpecialtyCardProps {
 
 function SpecialtyCard({ icon, title, description, points }: SpecialtyCardProps) {
   return (
-    <div className="bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
+    <div className="reveal bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
       <div className="flex items-center gap-3 mb-4">
         <div className="p-2 bg-muted rounded-lg">{icon}</div>
         <h3 className="text-xl font-bold">{title}</h3>

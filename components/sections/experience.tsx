@@ -34,7 +34,7 @@ function ExperienceCard({ item, current }: { item: ExperienceType; current: bool
         <Briefcase className="h-4 w-4 text-primary" />
       </span>
 
-      <div className="bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
+      <div className="reveal bg-card p-6 rounded-lg border hover:border-primary/30 transition-all shadow-sm">
         <div className="flex justify-between items-start mb-1 flex-wrap gap-2">
           <h3 className="text-lg font-bold">{item.role}</h3>
           <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded whitespace-nowrap">
