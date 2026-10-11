@@ -1,17 +1,6 @@
-"use client"
-
 import { siteConfig } from "@/config/site"
-import { useEffect, useState } from "react"
 
 export default function StructuredData() {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) return null
-
   // Filter out undefined social links
   const socialLinks = [
     siteConfig.socialLinks.github,
@@ -29,14 +18,30 @@ export default function StructuredData() {
     url: siteConfig.url,
     jobTitle: siteConfig.author.title,
     email: siteConfig.author.email,
+    worksFor: {
+      "@type": "Organization",
+      name: "Amazon Web Services",
+    },
+    alumniOf: {
+      "@type": "CollegeOrUniversity",
+      name: "University of the Witwatersrand",
+    },
+    hasCredential: siteConfig.experience
+      .filter((item) => item.credential)
+      .map((item) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: item.credential?.title,
+        recognizedBy: { "@type": "Organization", name: item.credential?.issuer },
+        url: item.credential?.link,
+      })),
     sameAs: socialLinks,
     knowsAbout: [
       "Software Engineering",
-      "Data Science",
-      "Machine Learning",
-      "Web Development",
+      "Infrastructure Automation",
+      "Cloud Computing",
+      "Fleet Management",
       "Full Stack Development",
-      ...siteConfig.skills.slice(0, 10), // Add top 10 skills
+      ...siteConfig.skills.map((skill) => skill.name),
     ],
   }
 

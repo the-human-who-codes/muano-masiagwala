@@ -6,15 +6,38 @@ export interface ProjectType {
   technologies: string[]
   github?: string
   demo?: string
+  image?: string
 }
 
-export interface EducationType {
-  id: string
+export interface CredentialType {
   title: string
-  institution: string
+  issuer: string
   date: string
-  description?: string
-  link?: string
+  link: string
+}
+
+export interface ExperienceType {
+  id: string
+  type: "work" | "education"
+  role: string
+  organization: string
+  start: string
+  end: string
+  summary: string
+  highlights: string[]
+  technologies: string[]
+  credential?: CredentialType
+}
+
+export interface HighlightType {
+  title: string
+  description: string
+}
+
+export interface SkillType {
+  name: string
+  icon: string
+  category: "Languages" | "Frameworks" | "Cloud & DevOps" | "Data & ML" | "Tools"
 }
 
 export interface NavItem {
@@ -29,6 +52,7 @@ export interface SiteConfig {
     name: string
     title: string
     email: string
+    location: string
   }
   description: string
   copyright: string
@@ -42,8 +66,7 @@ export interface SiteConfig {
     [key: string]: string | undefined
   }
   about: string[]
+  experience: ExperienceType[]
   projects: ProjectType[]
-  skills: string[]
-  education: EducationType[]
-  certifications: EducationType[]
+  skills: SkillType[]
 }

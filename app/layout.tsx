@@ -16,16 +16,16 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     "Software Engineer",
-    "Data Scientist",
-    "Web Developer",
-    "Machine Learning",
+    "AWS",
+    "EC2",
+    "Infrastructure Automation",
+    "Cloud Engineer",
     "Portfolio",
     siteConfig.author.name,
     "Full Stack Developer",
     "React Developer",
     "Next.js Developer",
-    "Python Developer",
-    "Data Analysis",
+    "South Africa",
   ],
   authors: [
     {
@@ -41,21 +41,11 @@ export const metadata: Metadata = {
     title: `${siteConfig.author.name} | ${siteConfig.author.title}`,
     description: siteConfig.description,
     siteName: siteConfig.name,
-    images: [
-      {
-        url: `${siteConfig.url}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: siteConfig.author.name,
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.author.name} | ${siteConfig.author.title}`,
     description: siteConfig.description,
-    images: [`${siteConfig.url}/og-image.png`],
-    creator: siteConfig.socialLinks.twitter || "@username",
   },
   robots: {
     index: true,
@@ -68,16 +58,10 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
-  },
-  manifest: `${siteConfig.url}/site.webmanifest`,
+  manifest: "/site.webmanifest",
   alternates: {
     canonical: siteConfig.url,
   },
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
@@ -86,8 +70,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>{children}</body>
+    // suppressHydrationWarning: browser extensions (e.g. SwiftRead, Grammarly) inject attributes on <html>/<body>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body className={inter.className} suppressHydrationWarning>
+        {children}
+      </body>
     </html>
   )
 }
