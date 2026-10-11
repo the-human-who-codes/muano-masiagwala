@@ -1,44 +1,69 @@
-"use client"
-
-import { useState, useEffect } from "react"
+import type React from "react"
+import Image from "next/image"
+import type { SkillType } from "@/types"
 
 interface SkillsProps {
-  skills: string[]
+  rows: SkillType[][]
 }
 
-export default function Skills({ skills }: SkillsProps) {
-  const [mounted, setMounted] = useState(false)
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
+export default function Skills({ rows }: SkillsProps) {
   return (
-    <section id="skills" className="py-20 bg-muted/50">
+    <section id="skills" className="py-20 bg-muted/50 overflow-hidden">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          <span className="text-primary">Skills</span> & Technologies
+          <span className="text-primary">Tech</span> Stack
         </h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
-          Technologies and tools I use to build modern, scalable software applications.
+          Languages, frameworks, and platforms I use to build and run software — from web apps to cloud infrastructure.
         </p>
+      </div>
 
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-            {skills.map((skill) => (
-              <SkillCard key={skill} skill={skill} />
-            ))}
-          </div>
-        </div>
+      <div className="space-y-6">
+        {rows.map((row, index) => (
+          <Marquee key={index} items={row} reverse={index % 2 === 1} />
+        ))}
       </div>
     </section>
   )
 }
 
-function SkillCard({ skill }: { skill: string }) {
+function Marquee({ items, reverse = false }: { items: SkillType[]; reverse?: boolean }) {
   return (
-    <div className="bg-card border rounded-lg p-4 text-center hover:border-primary/50 transition-all shadow-sm hover:transform hover:scale-105">
-      <span className="text-card-foreground/80 text-sm font-medium">{skill}</span>
+    <div
+      className="group flex overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] motion-reduce:[mask-image:none]"
+      style={{ "--marquee-duration": `${items.length * 3.5}s` } as React.CSSProperties}
+    >
+      <div
+        className={`flex w-max animate-marquee group-hover:[animation-play-state:paused] motion-reduce:w-full motion-reduce:animate-none ${
+          reverse ? "[animation-direction:reverse]" : ""
+        }`}
+      >
+        <ul className="flex shrink-0 gap-4 pr-4 motion-reduce:w-full motion-reduce:flex-wrap motion-reduce:justify-center motion-reduce:px-8">
+          {items.map((item) => (
+            <SkillCard key={item.name} skill={item} />
+          ))}
+        </ul>
+        {/* Duplicate set makes the loop seamless; hidden from assistive tech and when motion is reduced */}
+        <ul className="flex shrink-0 gap-4 pr-4 motion-reduce:hidden" aria-hidden="true">
+          {items.map((item) => (
+            <SkillCard key={item.name} skill={item} />
+          ))}
+        </ul>
+      </div>
     </div>
+  )
+}
+
+function SkillCard({ skill }: { skill: SkillType }) {
+  return (
+    <li className="flex items-center gap-3 rounded-xl border bg-card px-4 py-3 shadow-sm transition-colors hover:border-primary/50">
+      <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-zinc-100 p-1.5">
+        <Image src={skill.icon} alt="" width={28} height={28} className="h-full w-full object-contain" />
+      </span>
+      <span className="flex flex-col whitespace-nowrap">
+        <span className="text-sm font-semibold text-card-foreground">{skill.name}</span>
+        <span className="text-xs text-muted-foreground">{skill.category}</span>
+      </span>
+    </li>
   )
 }

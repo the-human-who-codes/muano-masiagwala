@@ -16,5 +16,6 @@ export const certificationsData: EducationType[] = [
     date: "In Progress",
     description: "Currently pursuing Oracle Certified Associate certification for Java SE programming.",
     link: "https://education.oracle.com/java-se-8-programmer-i/pexam_1Z0-808",
+    linkLabel: "View Exam",
   },
 ]

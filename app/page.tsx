@@ -7,6 +7,7 @@ import Contact from "@/components/sections/contact"
 import Footer from "@/components/layout/footer"
 import Header from "@/components/layout/header"
 import { siteConfig } from "@/config/site"
+import { skillRows } from "@/data/skills"
 import type { Metadata } from "next"
 import StructuredData from "@/components/structured-data"
 
@@ -24,7 +25,7 @@ export default function Home() {
         <Hero name={siteConfig.author.name} title={siteConfig.author.title} socialLinks={siteConfig.socialLinks} />
         <About content={siteConfig.about} />
         <Projects projects={siteConfig.projects} />
-        <Skills skills={siteConfig.skills} />
+        <Skills rows={skillRows} />
         <Education education={siteConfig.education} certifications={siteConfig.certifications} />
         <Contact />
       </main>

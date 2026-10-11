@@ -15,6 +15,13 @@ export interface EducationType {
   date: string
   description?: string
   link?: string
+  linkLabel?: string
+}
+
+export interface SkillType {
+  name: string
+  icon: string
+  category: "Languages" | "Frameworks" | "Cloud & DevOps" | "Data & ML" | "Tools"
 }
 
 export interface NavItem {
@@ -43,7 +50,7 @@ export interface SiteConfig {
   }
   about: string[]
   projects: ProjectType[]
-  skills: string[]
+  skills: SkillType[]
   education: EducationType[]
   certifications: EducationType[]
 }

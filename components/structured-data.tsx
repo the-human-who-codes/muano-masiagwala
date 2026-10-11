@@ -33,7 +33,7 @@ export default function StructuredData() {
       "Cloud Computing",
       "Fleet Management",
       "Full Stack Development",
-      ...siteConfig.skills.slice(0, 10), // Add top 10 skills
+      ...siteConfig.skills.map((skill) => skill.name),
     ],
   }
 

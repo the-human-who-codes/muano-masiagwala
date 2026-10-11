@@ -10,7 +10,7 @@ export const mainNavigation: NavItem[] = [
     href: "#projects",
   },
   {
-    title: "Skills",
+    title: "Stack",
     href: "#skills",
   },
   {
