@@ -42,16 +42,17 @@ export default function Hero({ name, title, socialLinks }: HeroProps) {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-primary/20 rounded-full blur-[100px]" />
       </div>
       <div className="relative w-32 h-32 md:w-40 md:h-40 mb-8 rounded-full border-2 border-primary p-1 animate-pulse-slow">
-  <div className="w-full h-full rounded-full overflow-hidden bg-card">
-    <Image
-      src="/assets/profile-photo.jpg"
-      alt={`${name}'s profile picture`}
-      fill
-      className="object-cover object-center rounded-full"
-      priority
-    />
-  </div>
-</div>
+        <div className="relative w-full h-full rounded-full overflow-hidden bg-card">
+          <Image
+            src="/assets/profile-photo.jpg"
+            alt={`${name}'s profile picture`}
+            fill
+            sizes="160px"
+            className="object-cover object-[35%_40%]"
+            priority
+          />
+        </div>
+      </div>
 
       <h1 className="text-4xl md:text-6xl font-bold mb-4">{name}</h1>
       <p className="text-xl text-muted-foreground max-w-2xl mb-8">{title}</p>
