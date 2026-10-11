@@ -7,7 +7,7 @@ export const experienceData: ExperienceType[] = [
     type: "work",
     role: "Software Engineer, EC2",
     organization: "Amazon Web Services",
-    start: "Jun 2026",
+    start: "Jul 2025",
     end: "Present",
     summary:
       "Building the patching automation for EC2 infrastructure, on a team that also owns fleet management inside AWS.",
@@ -24,7 +24,7 @@ export const experienceData: ExperienceType[] = [
     role: "Cloud Apprentice",
     organization: "Afrika Tikkun",
     start: "Mar 2025",
-    end: "Jun 2026",
+    end: "Jun 2025",
     summary: "Apprenticeship focused on cloud fundamentals after completing my Computer Science degree.",
     highlights: ["Learned core cloud concepts, Azure services, security, and governance"],
     technologies: ["Azure", "Cloud Fundamentals"],
