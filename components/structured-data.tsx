@@ -26,6 +26,14 @@ export default function StructuredData() {
       "@type": "CollegeOrUniversity",
       name: "University of the Witwatersrand",
     },
+    hasCredential: siteConfig.experience
+      .filter((item) => item.credential)
+      .map((item) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: item.credential?.title,
+        recognizedBy: { "@type": "Organization", name: item.credential?.issuer },
+        url: item.credential?.link,
+      })),
     sameAs: socialLinks,
     knowsAbout: [
       "Software Engineering",

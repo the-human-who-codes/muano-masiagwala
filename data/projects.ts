@@ -12,6 +12,7 @@ export const softwareProjects: ProjectType[] = [
     technologies: ["React", "Firebase Functions", "Firestore", "Swagger", "GitHub Actions"],
     github: github("lively-campus"),
     demo: "https://witslivelycampus.web.app/",
+    image: "/projects/lively-campus.jpg",
   },
   {
     id: "curecloud",
@@ -31,6 +32,7 @@ export const softwareProjects: ProjectType[] = [
     technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     github: github("algorithm-quest"),
     demo: "https://algorithm-quest.vercel.app",
+    image: "/projects/algorithm-quest.jpg",
   },
   {
     id: "eduquest",

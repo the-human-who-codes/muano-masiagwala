@@ -6,27 +6,32 @@ export interface ProjectType {
   technologies: string[]
   github?: string
   demo?: string
+  image?: string
+}
+
+export interface CredentialType {
+  title: string
+  issuer: string
+  date: string
+  link: string
 }
 
 export interface ExperienceType {
   id: string
+  type: "work" | "education"
   role: string
-  company: string
+  organization: string
   start: string
   end: string
   summary: string
   highlights: string[]
   technologies: string[]
+  credential?: CredentialType
 }
 
-export interface EducationType {
-  id: string
+export interface HighlightType {
   title: string
-  institution: string
-  date: string
-  description?: string
-  link?: string
-  linkLabel?: string
+  description: string
 }
 
 export interface SkillType {
@@ -47,6 +52,7 @@ export interface SiteConfig {
     name: string
     title: string
     email: string
+    location: string
   }
   description: string
   copyright: string
@@ -63,6 +69,4 @@ export interface SiteConfig {
   experience: ExperienceType[]
   projects: ProjectType[]
   skills: SkillType[]
-  education: EducationType[]
-  certifications: EducationType[]
 }

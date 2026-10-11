@@ -2,10 +2,6 @@ import type { NavItem } from "@/types"
 
 export const mainNavigation: NavItem[] = [
   {
-    title: "About",
-    href: "#about",
-  },
-  {
     title: "Experience",
     href: "#experience",
   },
@@ -16,10 +12,6 @@ export const mainNavigation: NavItem[] = [
   {
     title: "Stack",
     href: "#skills",
-  },
-  {
-    title: "Education",
-    href: "#education",
   },
   {
     title: "Contact",

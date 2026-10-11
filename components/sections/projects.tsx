@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { Github, ExternalLink } from "lucide-react"
 import type { ProjectType } from "@/types"
 
@@ -9,7 +10,7 @@ interface ProjectsProps {
 
 export default function Projects({ projects, githubProfile }: ProjectsProps) {
   return (
-    <section id="projects" className="py-20 bg-muted/50">
+    <section id="projects" className="py-20">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center text-primary">Projects</h2>
         <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
@@ -44,10 +45,20 @@ export default function Projects({ projects, githubProfile }: ProjectsProps) {
 function ProjectCard({ project }: { project: ProjectType }) {
   return (
     <article className="reveal group bg-card rounded-lg overflow-hidden border transition-all hover:border-primary/50 hover:shadow-md h-full flex flex-col">
-      <div className="h-40 bg-gradient-to-br from-muted to-card flex items-center justify-center">
-        <span className="text-4xl font-bold text-primary transition-transform group-hover:scale-110" aria-hidden="true">
-          {project.initials}
-        </span>
+      <div className="relative h-40 overflow-hidden bg-gradient-to-br from-muted to-card flex items-center justify-center">
+        {project.image ? (
+          <Image
+            src={project.image}
+            alt={`Screenshot of ${project.title}`}
+            fill
+            sizes="(min-width: 1024px) 360px, (min-width: 768px) 50vw, 100vw"
+            className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <span className="text-4xl font-bold text-primary transition-transform group-hover:scale-110" aria-hidden="true">
+            {project.initials}
+          </span>
+        )}
       </div>
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-xl font-bold mb-2 text-primary">{project.title}</h3>

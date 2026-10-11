@@ -1,4 +1,22 @@
+import type { HighlightType } from "@/types"
+
+// Intro paragraphs shown in the hero
 export const aboutContent: string[] = [
-  "I'm a Software Engineer at AWS on the EC2 team, where I build the patching automation that keeps EC2's infrastructure up to date. Our team also owns internal fleet management — scaling and operating fleets inside AWS — with automation at the heart of everything we ship.",
-  "I take strong ownership of what I build, carrying products from the first idea all the way to production. Before AWS, I earned my BSc in Computer Science at Wits and completed a cloud apprenticeship at Afrika Tikkun, where I earned the Microsoft Azure Fundamentals (AZ-900) certification. I love math, algorithms, and turning what's known into something new.",
+  "I'm a Software Engineer on the EC2 team at AWS, building the patching automation that keeps EC2's infrastructure up to date. My team also owns fleet management inside AWS — scaling and operating fleets with automation at the heart of everything we ship.",
+  "I take strong ownership of what I build, carrying products from the first idea all the way to production. I love math, algorithms, and turning what's known into something new.",
+]
+
+export const heroHighlights: HighlightType[] = [
+  {
+    title: "Infrastructure automation",
+    description: "Patching automation and fleet management for EC2 at AWS.",
+  },
+  {
+    title: "End-to-end ownership",
+    description: "Taking products from first idea through to production.",
+  },
+  {
+    title: "Full-stack foundations",
+    description: "React, Next.js, Node.js, and Firebase apps shipped to real users.",
+  },
 ]

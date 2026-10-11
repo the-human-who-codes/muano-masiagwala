@@ -5,8 +5,6 @@ import { aboutContent } from "@/data/about"
 import { allProjects } from "@/data/projects"
 import { experienceData } from "@/data/experience"
 import { allSkills } from "@/data/skills"
-import { educationData } from "@/data/education"
-import { certificationsData } from "@/data/certifications"
 import { mainNavigation } from "@/data/navigation"
 
 export const siteConfig: SiteConfig = {
@@ -21,6 +19,4 @@ export const siteConfig: SiteConfig = {
   experience: experienceData,
   projects: allProjects,
   skills: allSkills,
-  education: educationData,
-  certifications: certificationsData,
 }

@@ -8,7 +8,7 @@ interface SkillsProps {
 
 export default function Skills({ rows }: SkillsProps) {
   return (
-    <section id="skills" className="py-20 overflow-hidden">
+    <section id="skills" className="py-20 bg-muted/50 overflow-hidden">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="text-primary">Tech</span> Stack
