@@ -9,7 +9,7 @@ interface EducationProps {
 
 export default function Education({ education, certifications }: EducationProps) {
   return (
-    <section id="education" className="py-20">
+    <section id="education" className="py-20 bg-muted/50">
       <div className="container">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           <span className="text-primary">Education</span> & Certifications

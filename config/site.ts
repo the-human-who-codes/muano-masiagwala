@@ -3,6 +3,7 @@ import { authorData } from "@/data/author"
 import { socialLinks } from "@/data/social"
 import { aboutContent } from "@/data/about"
 import { allProjects } from "@/data/projects"
+import { experienceData } from "@/data/experience"
 import { allSkills } from "@/data/skills"
 import { educationData } from "@/data/education"
 import { certificationsData } from "@/data/certifications"
@@ -17,6 +18,7 @@ export const siteConfig: SiteConfig = {
   mainNav: mainNavigation,
   socialLinks: socialLinks,
   about: aboutContent,
+  experience: experienceData,
   projects: allProjects,
   skills: allSkills,
   education: educationData,

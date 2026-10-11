@@ -8,6 +8,17 @@ export interface ProjectType {
   demo?: string
 }
 
+export interface ExperienceType {
+  id: string
+  role: string
+  company: string
+  start: string
+  end: string
+  summary: string
+  highlights: string[]
+  technologies: string[]
+}
+
 export interface EducationType {
   id: string
   title: string
@@ -49,6 +60,7 @@ export interface SiteConfig {
     [key: string]: string | undefined
   }
   about: string[]
+  experience: ExperienceType[]
   projects: ProjectType[]
   skills: SkillType[]
   education: EducationType[]

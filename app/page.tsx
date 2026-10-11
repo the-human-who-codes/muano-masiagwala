@@ -1,5 +1,6 @@
 import Hero from "@/components/sections/hero"
 import About from "@/components/sections/about"
+import Experience from "@/components/sections/experience"
 import Projects from "@/components/sections/projects"
 import Skills from "@/components/sections/skills"
 import Education from "@/components/sections/education"
@@ -24,7 +25,8 @@ export default function Home() {
       <main>
         <Hero name={siteConfig.author.name} title={siteConfig.author.title} socialLinks={siteConfig.socialLinks} />
         <About content={siteConfig.about} />
-        <Projects projects={siteConfig.projects} />
+        <Experience experience={siteConfig.experience} />
+        <Projects projects={siteConfig.projects} githubProfile={siteConfig.socialLinks.github} />
         <Skills rows={skillRows} />
         <Education education={siteConfig.education} certifications={siteConfig.certifications} />
         <Contact />
