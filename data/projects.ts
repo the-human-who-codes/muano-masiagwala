@@ -4,6 +4,17 @@ const github = (repo: string) => `https://github.com/the-human-who-codes/${repo}
 
 export const softwareProjects: ProjectType[] = [
   {
+    id: "sudoku-arena",
+    title: "Sudoku Arena",
+    description:
+      "A C++20 Sudoku engine compiled to WebAssembly. Watch four algorithms, from human-style logic to Dancing Links, solve step by step, then play graded, seeded puzzles.",
+    initials: "SA",
+    technologies: ["C++", "WebAssembly", "TypeScript", "Vite", "Firebase"],
+    github: github("sudoku-arena"),
+    demo: "https://sudoku-arena-app.web.app",
+    image: "/projects/sudoku-arena.jpg",
+  },
+  {
     id: "lively-campus",
     title: "Wits Lively Campus",
     description:
